@@ -5,6 +5,8 @@ import { Onest } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { ConvexClientProvider } from "@/context/ConvexClientProvider";
+import { Suspense } from "react";
+import FallbackLoader from "@/components/FallbackLoader";
 
 const onest = Onest({ subsets: ["latin"] });
 
@@ -23,7 +25,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={`bg-white ${onest.className}`}>
           <ConvexClientProvider>
-            <NuqsAdapter>{children}</NuqsAdapter>
+            <Suspense fallback={<FallbackLoader />}>
+              <NuqsAdapter>{children}</NuqsAdapter>
+            </Suspense>
             <Toaster />
           </ConvexClientProvider>
         </body>
