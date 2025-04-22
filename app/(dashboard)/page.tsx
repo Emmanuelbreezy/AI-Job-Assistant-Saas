@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 import JobInfoForm from "./_components/JobInfoForm";
+import AppHighlights from "./_components/AppHighlights";
 
 export default function Home() {
   const { open, isMobile } = useSidebar();
@@ -19,6 +20,7 @@ export default function Home() {
 
       <div className="space-y-3 w-full max-w-7xl mx-auto">
         {/* <AppHighlights /> */}
+        <AppHighlights />
 
         <div className="text-center mt-5">
           <h1

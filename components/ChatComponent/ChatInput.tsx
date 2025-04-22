@@ -68,7 +68,7 @@ const ChatInput = ({ jobId, isDisabled, userId }: PropType) => {
       >
         <div
           className="relative flex flex-col h-full
-              flex-1 px-4 mb-3 w-full
+              flex-1 px-4 mb-3 lg:-mb-3 w-full
               "
         >
           {/* {Suggested prompt} */}
